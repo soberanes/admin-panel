@@ -1,0 +1,348 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.3.0
+build: 3167
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+/* fontface */
+@font-face {
+    font-family: 'FuturaStdBold';
+    src: url('fonts/futurastd-bold/uturastd-bold.eot');
+    src: url('fonts/futurastd-bold/futurastd-bold.eot') format('embedded-opentype'),
+         url('fonts/futurastd-bold/futurastd-bold.woff') format('woff'),
+         url('fonts/futurastd-bold/futurastd-bold.ttf') format('truetype'),
+         url('fonts/futurastd-bold/futurastd-bold.svg#FuturaStdBold') format('svg');
+}
+@font-face {
+    font-family: 'FuturaStdHeavy';
+    src: url('fonts/futurastd-heavy/futurastd-heavy.eot');
+    src: url('fonts/futurastd-heavy/futurastd-heavy.eot') format('embedded-opentype'),
+         url('fonts/futurastd-heavy/futurastd-heavy.woff') format('woff'),
+         url('fonts/futurastd-heavy/futurastd-heavy.ttf') format('truetype'),
+         url('fonts/futurastd-heavy/futurastd-heavy.svg#FuturaStdHeavy') format('svg');
+}
+@font-face {
+    font-family: 'FuturaStdBook';
+    src: url('fonts/futurastd-book/futurastd-book.eot');
+    src: url('fonts/futurastd-book/futurastd-book.eot') format('embedded-opentype'),
+         url('fonts/futurastd-book/futurastd-book.woff') format('woff'),
+         url('fonts/futurastd-book/futurastd-book.ttf') format('truetype'),
+         url('fonts/futurastd-book/futurastd-book.svg#FuturaStdBook') format('svg');
+}
+
+*{margin:0;padding:0;}
+html,body{
+    height:100%;
+}
+body{
+  margin:0;
+  padding:0;
+  background: #111;
+  font-family: 'FuturaStdBook';
+}
+.wrapper{
+	width: 100%;
+	background: #FFFFFF;
+}
+#content{
+	margin: 0 auto;
+	min-height: 400px;
+	padding: 15px 5px 30px;
+	width: 960px;
+	background: #FFF;
+}
+.login{
+	width: 500px;
+	border: 1px solid;
+	margin: 15% auto;
+	padding: 30px 30px 10px 30px;
+	border-radius: 8px;
+	
+}
+.login .logo{
+	background: url('images/logo.png');
+	width: 280px;
+	height: 95px;
+	background-size: 100%;
+	background-position: center;
+	margin: 0 auto 30px;
+}
+.login .message{
+	position: relative;
+	top: 10px;
+}
+header.main {
+	background: url(images/row-bg-sprite.png) repeat-x 0px -108px;
+	height: 55px;
+	min-width: 960px;
+	color: #FFF;
+}
+header.main .main_nav{
+	margin: 0 auto;
+	width: 960px;
+}
+header.main .main_nav li{
+	list-style: none:
+	display: inline-block;
+}
+header.main a{
+	text-decoration: none;
+	color: #BDBDBD;
+}
+header.main .view_site {
+	background: #333;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	box-shadow: 0 1px 0 #000;
+	-webkit-box-shadow: 0 1px 0 #000;
+	-moz-box-shadow: 0 1px 0 #000;
+	-ms-box-shadow: 0 1px 0 #000;
+	-o-box-shadow: 0 1px 0 #000;
+	color: #CCC;
+	float: left;
+	font-size: 11px;
+	height: 19px;
+	line-height: 19px;
+	margin: 18px 20px;
+	padding: 0 15px;
+	text-shadow: 0 -1px 0 #000;
+	transition: background 0.2s;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	-ms-transition: background 0.2s;
+	-o-transition: background 0.2s;
+}
+header.main .main_nav .logout{
+	float: right;
+	font-size: 12px;
+	height: 11px;
+	margin: 17px 0;
+	text-shadow: 0 1px 0 #000;
+}
+header.main .main_nav .dot{
+	float: right;
+	font-size: 12px;
+	height: 11px;
+	margin: 17px 17px 17px 0px;
+	text-shadow: 0 1px 0 #000;
+}
+header.main .main_nav .welcome{
+	color: #FFF;
+	float: right;
+	font-size: 13px;
+	height: 11px;
+	margin: 17px;
+	text-shadow: 0 1px 0 #000;
+}
+header.main .main_nav .username{
+	color: #0081c2;
+}
+header.main strong {
+	color: #FFF;
+	float: left;
+	font-size: 17px;
+	font-weight: normal;
+	height: 55px;
+	line-height: 59px;
+	text-shadow: 0 1px 0 #000;
+}
+.submenu{
+	width: 960px;
+	margin: 0 auto;
+}
+.submenu .navbar-inner{
+	border-radius: 0px 0px 4px 4px;
+}
+footer.main {
+	background: #111;
+	border-top: 3px solid #fff;
+	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.25);
+	min-width: 960px;
+	padding: 20px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+}
+footer.main section {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 960px;
+}
+footer.main section .credits{
+	color: #BDBDBD;
+	font-weight: bold;
+}
+.view_content .center{
+	text-align: center;
+	vertical-align: middle;
+}
+.view_content h1{
+	font-family: 'FuturaStdHeavy';
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+}
+.lead{
+	font-size: 18px;
+}
+.margin-bottom{
+	margin-bottom: 130px;
+}
+/* Index View */
+
+section#index iframe{
+	width: 777px;
+	height: 750px;
+}
+
+/* Theme View */
+
+.fileinput-button input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	opacity: 0;
+	-ms-filter: 'alpha(opacity=0)';
+	font-size: 200px;
+	direction: ltr;
+	cursor: pointer;
+}
+.fileupload-buttonbar .btn, .fileupload-buttonbar .toggle {
+	margin-bottom: 5px;
+}
+.fileinput-button {
+	position: relative;
+	overflow: hidden;
+}
+.btn-success {
+	color: #fff;
+	background-color: #0081c2;
+	border-color: #0081c2;
+}
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+p.message{
+	display: inline-block;
+	margin-left: 20px;
+}
+.tooltip_btn{
+	cursor: pointer;
+}
+.thumbnail{
+	width: 15%;
+	height: auto;
+}
+.alert{
+	cursor: pointer;
+}
+
+/* Admin Libros */
+section.controls{
+	margin-bottom: 10px;
+	text-align: right;
+}
+section.controls .form-search{
+	display: inline-block;
+}
+.add_form{
+	width: 400px;
+	margin: 0 auto 20px;
+	display: inline-block;
+	left: 150px;
+	position: relative;
+}
+.edit_img{
+	float: right;
+	position: relative;
+	right: 150px;
+}
+.text_form{
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+}
+/* Top */
+#sortable1, #sortable2 { 
+	list-style-type: none;
+	margin: 0;
+	padding: 2px;
+	margin-right: 10px;
+	min-width: 400px;
+	min-height: 42px;
+	background: #ccc;
+	max-width: 420px;
+}
+#sortable1 li, #sortable2 li { 
+	margin: 5px auto;
+	padding: 5px;
+	font-size: 1.2em;
+	width: 94%;
+	max-height: 20px;
+	cursor: move;
+}
+#sortable1{
+	max-height: 379px;
+	min-height: 375px;
+}
+.numbers{
+	width: 38px;
+	z-index: 1000;
+	position: absolute;
+	top: 235px;
+	text-align: center;
+	font-weight: bold;
+	left: 510px;
+	line-height: 2.7em;
+}
+#books-list{
+	min-height: 417px;
+	text-align: center;
+	width: 830px;
+	margin: 0 auto;
+}
+#top_response{
+	height: 40px;
+	margin-top: 30px;
+}
+.form_top{
+	text-align: center;
+	padding: 30px;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
